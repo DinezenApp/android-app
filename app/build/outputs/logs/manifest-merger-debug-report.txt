@@ -1,0 +1,95 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:2:1-23:12
+	package
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:3:5-38
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+application
+ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:5:5-21:19
+MERGED from [com.android.support:design:25.3.0] /home/nick/.android/build-cache/9aaee828b6c938cb03a6d78b8f1a4606004b2460/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.0] /home/nick/.android/build-cache/1eeb42495922445b38da28ef71f8282e4b1c6ea1/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /home/nick/.android/build-cache/8d2d33ca28cfc7a1f173e15a6d1866c3091d9542/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.0] /home/nick/.android/build-cache/410b19f17283a698d2feb9378bb866d0677ad064/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.0] /home/nick/.android/build-cache/73f2d66c12e28a358bf516b5c4526ec162f2daf6/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.0] /home/nick/.android/build-cache/04bfb3adc252e30f8366d8b560facec0140eee5e/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.0] /home/nick/.android/build-cache/63705a6293a7d9215f20e8a913f4f80f02af2859/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.0] /home/nick/.android/build-cache/3b36fa3af2fda8971f8edd3c57b522ba3986d4c3/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.0] /home/nick/.android/build-cache/992e5e5f086c9ddf2b50b85bad6c3d63da516908/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /home/nick/.android/build-cache/994e1f7c60901a1020672fda344c587e4502297c/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.0] /home/nick/.android/build-cache/92dcddb829130288db866678f630db527a874c45/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.dinezen.www.dinezen.MainActivity
+ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:12:9-20:20
+	android:label
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:14:13-45
+	android:name
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:13:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml:18:27-74
+uses-sdk
+INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.3.0] /home/nick/.android/build-cache/9aaee828b6c938cb03a6d78b8f1a4606004b2460/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.0] /home/nick/.android/build-cache/1eeb42495922445b38da28ef71f8282e4b1c6ea1/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /home/nick/.android/build-cache/8d2d33ca28cfc7a1f173e15a6d1866c3091d9542/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:25.3.0] /home/nick/.android/build-cache/9d65c1f7895ccbfc4643cc2d5c84608e9e332467/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.0] /home/nick/.android/build-cache/410b19f17283a698d2feb9378bb866d0677ad064/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.3.0] /home/nick/.android/build-cache/73f2d66c12e28a358bf516b5c4526ec162f2daf6/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.0] /home/nick/.android/build-cache/04bfb3adc252e30f8366d8b560facec0140eee5e/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.0] /home/nick/.android/build-cache/63705a6293a7d9215f20e8a913f4f80f02af2859/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.0] /home/nick/.android/build-cache/3b36fa3af2fda8971f8edd3c57b522ba3986d4c3/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.0] /home/nick/.android/build-cache/992e5e5f086c9ddf2b50b85bad6c3d63da516908/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /home/nick/.android/build-cache/994e1f7c60901a1020672fda344c587e4502297c/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.0] /home/nick/.android/build-cache/92dcddb829130288db866678f630db527a874c45/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.0] /home/nick/.android/build-cache/9aaee828b6c938cb03a6d78b8f1a4606004b2460/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+		INJECTED from /home/nick/code/Android/Dinezen/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.0] /home/nick/.android/build-cache/9aaee828b6c938cb03a6d78b8f1a4606004b2460/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.0] /home/nick/.android/build-cache/1eeb42495922445b38da28ef71f8282e4b1c6ea1/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /home/nick/.android/build-cache/8d2d33ca28cfc7a1f173e15a6d1866c3091d9542/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.0] /home/nick/.android/build-cache/9d65c1f7895ccbfc4643cc2d5c84608e9e332467/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.0] /home/nick/.android/build-cache/410b19f17283a698d2feb9378bb866d0677ad064/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.0] /home/nick/.android/build-cache/73f2d66c12e28a358bf516b5c4526ec162f2daf6/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.0] /home/nick/.android/build-cache/04bfb3adc252e30f8366d8b560facec0140eee5e/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.0] /home/nick/.android/build-cache/63705a6293a7d9215f20e8a913f4f80f02af2859/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.0] /home/nick/.android/build-cache/3b36fa3af2fda8971f8edd3c57b522ba3986d4c3/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.0] /home/nick/.android/build-cache/992e5e5f086c9ddf2b50b85bad6c3d63da516908/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /home/nick/.android/build-cache/994e1f7c60901a1020672fda344c587e4502297c/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.0] /home/nick/.android/build-cache/92dcddb829130288db866678f630db527a874c45/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.0] /home/nick/.android/build-cache/9aaee828b6c938cb03a6d78b8f1a4606004b2460/output/AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.0] /home/nick/.android/build-cache/9aaee828b6c938cb03a6d78b8f1a4606004b2460/output/AndroidManifest.xml:26:9-47

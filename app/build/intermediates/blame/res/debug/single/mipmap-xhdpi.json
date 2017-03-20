@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/nick/code/Android/Dinezen/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/home/nick/code/Android/Dinezen/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/nick/code/Android/Dinezen/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher_round.png",
+        "source": "/home/nick/code/Android/Dinezen/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    }
+]

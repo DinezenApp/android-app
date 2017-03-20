@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/nick/code/Android/Dinezen/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/nick/.android/build-cache/1eeb42495922445b38da28ef71f8282e4b1c6ea1/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/nick/code/Android/Dinezen/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/nick/.android/build-cache/1eeb42495922445b38da28ef71f8282e4b1c6ea1/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]
