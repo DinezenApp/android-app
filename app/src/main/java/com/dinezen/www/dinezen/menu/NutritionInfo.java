@@ -1,11 +1,14 @@
-package com.dinezen.www.dinezen;
+package com.dinezen.www.dinezen.menu;
 
 /**
- * Created by nick on 3/29/17.
+ * Stores nutrition information for MenuItem
  */
 
 public class NutritionInfo {
+    private enum PortionType{EACH, OUNCE, GRAM}
     private int calories;
+    private int portionNum;
+    private PortionType portionType;
 
     public NutritionInfo(int calories) {
         this.calories = calories;

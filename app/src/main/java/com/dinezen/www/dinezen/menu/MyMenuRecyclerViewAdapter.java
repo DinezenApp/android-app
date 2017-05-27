@@ -1,4 +1,4 @@
-package com.dinezen.www.dinezen;
+package com.dinezen.www.dinezen.menu;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dinezen.www.dinezen.MenuFragment.OnListFragmentInteractionListener;
+import com.dinezen.www.dinezen.R;
+import com.dinezen.www.dinezen.menu.MenuFragment.OnListFragmentInteractionListener;
 
 import java.util.List;
 

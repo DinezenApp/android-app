@@ -3,4 +3,6 @@
     <string name="title_search">Search</string>
     <string name="title_menu">Menu</string>
     <string name="title_meals">Meals</string>
+
+    <string name="api_url">https://umddiningapi.pesce.host</string>
 </resources>

@@ -1,7 +1,7 @@
-package com.dinezen.www.dinezen;
+package com.dinezen.www.dinezen.menu;
 
 /**
- * Created by nick on 3/29/17.
+ * Stores information for a food item in a menu
  */
 
 public class MenuItem {
