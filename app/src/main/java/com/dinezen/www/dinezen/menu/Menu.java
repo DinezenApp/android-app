@@ -132,6 +132,14 @@ public class Menu {
                     nutrition.setCholesterol(jsonNutrition.optDouble("cholesterol"));
                     nutrition.setProtein(jsonNutrition.optDouble("protein"));
                     nutrition.setSodium(jsonNutrition.optDouble("sodium"));
+                    JSONArray allergensJSON = jsonNutrition.optJSONArray("allergens");
+                    if(allergensJSON != null) {
+                        String[] allergens = new String[allergensJSON.length()];
+                        for(int k = 0; k < allergensJSON.length(); k++) {
+                            allergens[k] = allergensJSON.getString(k);
+                        }
+                        nutrition.setAllergens(allergens);
+                    }
                 }
 
                 MenuItem item = new MenuItem(name, nutrition);

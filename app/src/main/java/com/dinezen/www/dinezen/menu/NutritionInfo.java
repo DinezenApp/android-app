@@ -18,6 +18,7 @@ public class NutritionInfo {
             sugar, cholesterol, protein, sodium;
     private int portionNum;
     private String portionType;
+    private String[] allergens;
 
     public NutritionInfo(){}
 
@@ -125,12 +126,25 @@ public class NutritionInfo {
         this.portionType = portionType;
     }
 
+    public String[] getAllergens() {
+        return allergens;
+    }
+
+    public void setAllergens(String[] allergens) {
+        this.allergens = allergens;
+    }
+
     @Override
     public String toString() {
+        String allergensString = "";
+        for(String a : allergens) {
+            allergensString += a + " ";
+        }
         return "Nutrition Facts\tTotal Fat " + totalfat + "\tTot. Carb. " + carb +
                 "\nServing Size " + portionNum + " " + portionType + "\tSat. Fat " + satfat + "\tDietary Fiber " + fiber +
                 "\nCalories " + calories + "\tTrans Fat " + transfat + "\tSugars " + sugar +
                 "\nCalories from Fat " + fatcalories + "\tCholesterol " + cholesterol + "\tProtein " + protein +
-                "\n\t\tSodium " + sodium;
+                "\n\t\tSodium " + sodium +
+                "\nAllergens: " + allergensString;
     }
 }
