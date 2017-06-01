@@ -19,6 +19,7 @@ public class NutritionInfo {
     private int portionNum;
     private String portionType;
     private String[] allergens;
+    private String ingredients;
 
     public NutritionInfo(){}
 
@@ -132,6 +133,14 @@ public class NutritionInfo {
 
     public void setAllergens(String[] allergens) {
         this.allergens = allergens;
+    }
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
     }
 
     @Override

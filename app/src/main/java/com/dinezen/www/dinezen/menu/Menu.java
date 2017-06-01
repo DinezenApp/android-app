@@ -140,6 +140,7 @@ public class Menu {
                         }
                         nutrition.setAllergens(allergens);
                     }
+                    nutrition.setIngredients(jsonNutrition.optString("ingredients"));
                 }
 
                 MenuItem item = new MenuItem(name, nutrition);
