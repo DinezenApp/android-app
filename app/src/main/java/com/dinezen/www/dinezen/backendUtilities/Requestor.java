@@ -3,6 +3,7 @@ package com.dinezen.www.dinezen.backendUtilities;
 import android.content.Context;
 import android.util.Log;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -23,6 +24,10 @@ import org.json.JSONException;
 
 public class Requestor {
     private static final String TAG = "REQUESTOR";
+    /**
+     * Request timeout in ms
+     */
+    private int timeout = 10000;
     private static Requestor instance;
 
     private static RequestQueue queue;
@@ -48,7 +53,7 @@ public class Requestor {
                         if(response != null) {
                             try {
                                 Menu menu = new Menu(response);
-                                Log.d(TAG + ":", "Received menu from " + reqString);
+                                Log.d(TAG, "Received menu from " + reqString);
                                 callback.menu(menu);
                             } catch (JSONException e){
                                 callback.error(e.toString());
@@ -60,10 +65,16 @@ public class Requestor {
                 new Response.ErrorListener(){
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e(TAG+":", "Error status code: " + error.networkResponse +
+                        Log.e(TAG, "Error status code: " + error.networkResponse +
                                 " From " + reqString);
                     }
                 });
+
+        req.setRetryPolicy(new DefaultRetryPolicy(
+                timeout,
+                DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+
         queue.add(req);
     }
 

@@ -116,14 +116,25 @@ public class Menu {
                 JSONObject jsonItem = subMenu.getJSONObject(j);
                 String name = jsonItem.getString("name");
 
-                //TODO Parse the rest of the nutrition information.
-                //TODO Why is nutrition null for some items ex. Assorted Mini Rolls at NCD on 2/22/2017
-                int calories = -1;
-
                 JSONObject jsonNutrition = jsonItem.optJSONObject("nutrition");
-                if(jsonNutrition != null)
-                    calories = jsonNutrition.getInt("calories");
-                MenuItem item = new MenuItem(name, new NutritionInfo(calories));
+                NutritionInfo nutrition = new NutritionInfo();
+                if(jsonNutrition != null) {
+                    nutrition.setPortionNum(jsonNutrition.optInt("portionnum"));
+                    nutrition.setPortionType(jsonNutrition.optString("portionunits"));
+                    nutrition.setCalories(jsonNutrition.optInt("calories"));
+                    nutrition.setFatcalories(jsonNutrition.optInt("fatcalories"));
+                    nutrition.setTotalfat(jsonNutrition.optDouble("totalfat"));
+                    nutrition.setCarb(jsonNutrition.optDouble("carb"));
+                    nutrition.setSatfat(jsonNutrition.optDouble("satfat"));
+                    nutrition.setFiber(jsonNutrition.optDouble("fiber"));
+                    nutrition.setTransfat(jsonNutrition.optDouble("transfat"));
+                    nutrition.setSugar(jsonNutrition.optDouble("sugar"));
+                    nutrition.setCholesterol(jsonNutrition.optDouble("cholesterol"));
+                    nutrition.setProtein(jsonNutrition.optDouble("protein"));
+                    nutrition.setSodium(jsonNutrition.optDouble("sodium"));
+                }
+
+                MenuItem item = new MenuItem(name, nutrition);
                 items.add(item);
             }
         }

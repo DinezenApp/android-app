@@ -46,4 +46,9 @@ public class MenuIdentifier implements Comparable<MenuIdentifier> {
         result = 31 * result + (meal != null ? meal.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Menu (Location: " + location + " Date: " + date + " Meal: " + meal + ")";
+    }
 }

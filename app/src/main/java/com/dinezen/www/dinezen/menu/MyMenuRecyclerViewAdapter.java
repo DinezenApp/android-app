@@ -1,6 +1,7 @@
 package com.dinezen.www.dinezen.menu;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.List;
  */
 public class MyMenuRecyclerViewAdapter extends RecyclerView.Adapter<MyMenuRecyclerViewAdapter.ViewHolder> {
 
+    private static final String TAG = "MenuRecylerViewAdapter";
     private final List<MenuItem> mValues;
     private final OnListFragmentInteractionListener mListener;
 
@@ -46,7 +48,8 @@ public class MyMenuRecyclerViewAdapter extends RecyclerView.Adapter<MyMenuRecycl
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
                     mListener.onListFragmentInteraction(holder.mItem);
-                    Toast.makeText(holder.mView.getContext(), "Calories: "+holder.mItem.getNutrition().getCalories(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(holder.mView.getContext(), holder.mItem.getNutrition().toString(), Toast.LENGTH_SHORT).show();
+                    Log.i(TAG, holder.mItem.getNutrition().toString());
                 }
             }
         });

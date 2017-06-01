@@ -37,8 +37,11 @@ public class Menus {
      */
     public void loadMenu(final Menu.Location location, final Menu.Meal meal, final Menu.Date date, final CompletedCallback callback) {
         final MenuIdentifier id = new MenuIdentifier(location, meal, date);
+        Log.i(TAG, "Loading menu " + id);
+
         if(hasMenu(location, meal, date)) {
-            callback.complete();
+            if(callback != null)
+                callback.complete();
             return;
         }
         loading.put(id, new ArrayList<CompletedCallback>());
