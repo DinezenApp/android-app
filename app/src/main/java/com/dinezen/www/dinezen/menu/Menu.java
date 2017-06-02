@@ -8,7 +8,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * A menu containing MenuItems for a specified date, location, and meal.
@@ -87,20 +89,10 @@ public class Menu {
 
     public static String TAG = "MENU";
     private List<MenuItem> items;
+    private Map<String, List<MenuItem>> areaItems;
     private Location location;
     private Meal meal;
     private Date date;
-
-    public Menu(Location location, Meal meal, Date date) {
-        this.location = location;
-        this.meal = meal;
-        this.date = date;
-
-    }
-
-    public Menu(List<MenuItem> items) {
-        this.items = items;
-    }
 
     /**
      * Creates a menu from a JSON array given from the get_full_menu.json endpoint.
@@ -108,9 +100,12 @@ public class Menu {
      */
     public Menu(JSONArray json) throws JSONException {
         this.items = new ArrayList<>();
+        this.areaItems = new HashMap<>();
         for(int i = 0; i < json.length(); i++) {
             JSONObject zone = json.getJSONObject(i);
-            Log.d(TAG, "Loading " + zone.getString("area"));
+            String area = zone.getString("area");
+            Log.d(TAG, "Loading " + area);
+            ArrayList<MenuItem> areaList = new ArrayList<>();
             JSONArray subMenu = zone.getJSONArray("menu");
             for(int j = 0; j < subMenu.length(); j++) {
                 JSONObject jsonItem = subMenu.getJSONObject(j);
@@ -145,14 +140,36 @@ public class Menu {
 
                 MenuItem item = new MenuItem(name, nutrition);
                 items.add(item);
+                areaList.add(item);
             }
+            areaItems.put(area, areaList);
         }
     }
 
     /**
      * Returns all of the MenuItems in the menu.
      */
-    protected List<MenuItem> getItems() {
+    public List<MenuItem> getItems() {
         return items;
     }
+
+    public Map<String, List<MenuItem>> getAreaItems() {
+        return areaItems;
+    }
+
+    /**
+     * @return All MenuListItems (Area headers with menu items).
+     */
+    public List<MenuListItem> getListItems() {
+        ArrayList<MenuListItem> list = new ArrayList<>();
+        for(String area : areaItems.keySet()) {
+            list.add(new AreaHeaderItem(area));
+            List<MenuItem> items = areaItems.get(area);
+            for(MenuItem item : items) {
+                list.add(item);
+            }
+        }
+        return list;
+    }
+
 }
