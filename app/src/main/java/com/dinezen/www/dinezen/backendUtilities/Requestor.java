@@ -27,7 +27,7 @@ public class Requestor {
     /**
      * Request timeout in ms
      */
-    private int timeout = 10000;
+    private int timeout = 5000;
     private static Requestor instance;
 
     private static RequestQueue queue;
@@ -65,6 +65,7 @@ public class Requestor {
                 new Response.ErrorListener(){
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        callback.error(error.toString());
                         Log.e(TAG, "Error status code: " + error.networkResponse +
                                 " From " + reqString);
                     }

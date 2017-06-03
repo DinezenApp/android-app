@@ -94,6 +94,9 @@ public class Menu {
     private Meal meal;
     private Date date;
 
+    public Menu(Map<String, List<MenuItem>> areas) {
+        areaItems = areas;
+    }
     /**
      * Creates a menu from a JSON array given from the get_full_menu.json endpoint.
      * @throws JSONException

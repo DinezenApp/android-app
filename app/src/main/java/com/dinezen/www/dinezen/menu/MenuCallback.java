@@ -6,5 +6,5 @@ package com.dinezen.www.dinezen.menu;
 
 public interface MenuCallback {
     void menu(Menu menu);
-    void error(String erro8r);
+    void error(String error);
 }

@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 import com.dinezen.www.dinezen.backendUtilities.CompletedCallback;
 import com.dinezen.www.dinezen.backendUtilities.Requestor;
 import com.dinezen.www.dinezen.menu.Menu;
+import com.dinezen.www.dinezen.menu.MenuCallback;
 import com.dinezen.www.dinezen.menu.MenuFragment;
 import com.dinezen.www.dinezen.menu.Menus;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnLi
     private static String TAG = "MAIN_ACTIVITY";
     private FrameLayout  contentView;
     private FragmentManager fragmentManager;
+    private MenuFragment menuFragment;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -32,17 +34,22 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnLi
                     //fragmentManager.beginTransaction().replace(R.id.content, new MealsFragment()).commit();
                     return true;
                 case R.id.navigation_menu:
-                    Menus.getInstance().waitForMenu(Menu.Location.NORTH_CAMPUS_DINER, Menu.Meal.LUNCH, new Menu.Date(22, 2, 2017), new CompletedCallback() {
-                        @Override
-                        public void complete() {
-                            fragmentManager.beginTransaction().replace(R.id.content, new MenuFragment()).commit();
-                        }
+                    if (menuFragment == null) {
+                        menuFragment = new MenuFragment();
+                        Menus.getInstance().loadMenu(Menu.Location.NORTH_CAMPUS_DINER, Menu.Meal.LUNCH, new Menu.Date(22, 2, 2017), new MenuCallback() {
+                            @Override
+                            public void menu(Menu menu) {
+                                menuFragment.setMenu(menu);
+                            }
 
-                        @Override
-                        public void error(String error) {
-                            Log.e(TAG, error);
-                        }
-                    });
+                            @Override
+                            public void error(String error) {
+                                menuFragment.setError(error);
+                                Log.e(TAG, error);
+                            }
+                        });
+                    }
+                fragmentManager.beginTransaction().replace(R.id.content, menuFragment).commit();
                     return true;
                 case R.id.navigation_search:
                     //fragmentManager.beginTransaction().replace(R.id.content, new SearchFragment()).commit();
@@ -64,7 +71,6 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnLi
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        Menus.getInstance().loadMenu(Menu.Location.NORTH_CAMPUS_DINER, Menu.Meal.LUNCH, new Menu.Date(22, 2, 2017));
     }
 
     @Override

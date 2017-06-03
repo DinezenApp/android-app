@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.dinezen.www.dinezen.R;
 import com.dinezen.www.dinezen.menu.MenuFragment.OnListFragmentInteractionListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,12 +21,23 @@ public class MenuRecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     protected static final int VIEW_AREA = 0, VIEW_ITEM = 1;
     private static final String TAG = "MenuRecyclerViewAdapter";
-    private final List<MenuListItem> items;
-    private final OnListFragmentInteractionListener listener;
+    private List<MenuListItem> items;
+    private Menu menu;
+    private OnListFragmentInteractionListener listener;
 
-    public MenuRecyclerViewAdapter(List<MenuListItem> items, OnListFragmentInteractionListener listener) {
-        this.items = items;
+    public MenuRecyclerViewAdapter(Menu menu, OnListFragmentInteractionListener listener) {
+        if(menu == null)
+            this.items = new ArrayList<>();
+        else
+            this.items = menu.getListItems();
+        this.menu = menu;
         this.listener = listener;
+    }
+
+    public void setMenu(Menu menu) {
+        this.menu = menu;
+        this.items = menu.getListItems();
+        notifyDataSetChanged();
     }
 
     @Override
