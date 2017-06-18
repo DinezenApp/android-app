@@ -44,8 +44,8 @@ public class Requestor {
      */
     public void getMenu(Menu.Location location, Menu.Date date, Menu.Meal meal, final MenuCallback callback) {
         final String reqString = context.getResources().getString(
-                R.string.api_url) + "/get_full_menu.json?location_id="+location.getId()+
-                "&meal_name="+meal.getName()+"&date="+date.toURLString();
+                R.string.api_url) + "/get_full_menu.json?location="+location.ordinal()+
+                "&meal="+meal.ordinal()+"&date="+date.toURLString();
         final JsonArrayRequest req = new JsonArrayRequest(Request.Method.GET, reqString, null,
                 new Response.Listener<JSONArray>(){
                     @Override

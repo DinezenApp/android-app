@@ -19,19 +19,11 @@ import java.util.Map;
 public class Menu {
 
     public enum Location {
-        SOUTH_CAMPUS_DINER("51"), NORTH_CAMPUS_DINER("04"), TWO_FIFTY_ONE("16");
-
-        private final String id;
-        Location(String id) { this.id = id; }
-        public String getId() { return id; }
+        NORTH_CAMPUS_DINER, SOUTH_CAMPUS_DINER, TWO_FIFTY_ONE;
     }
 
     public enum Meal {
-        BREAKFAST("Breakfast"), LUNCH("Lunch"), DINNER("Dinner");
-
-        private final String name;
-        Meal(String name) { this.name = name; }
-        public String getName() { return name; }
+        BREAKFAST, LUNCH, DINNER;
     }
 
     public static class Date{

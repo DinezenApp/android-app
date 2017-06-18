@@ -18,7 +18,7 @@ public class NutritionInfo {
             sugar, cholesterol, protein, sodium;
     private int portionNum;
     private String portionType;
-    private String[] allergens;
+    private String[] allergens = {};
     private String ingredients;
 
     public NutritionInfo(){}
